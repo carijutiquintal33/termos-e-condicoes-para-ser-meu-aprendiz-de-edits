@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Termos e Condições</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+    .caixa {
+      border: 2px solid #28a745;
+      display: inline-block;
+      padding: 10px 30px;
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+    .caixa:hover {
+      background-color: #218838;
+    }
+    #termos {
+      white-space: pre-line;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Termos e Condições de Uso</h2>
+  <div id="termos">
+    Este aprendizado é fornecido de forma pessoal e não comercial.
+    
+    Nenhuma informação compartilhada durante o processo será repassada a terceiros sem autorização.
+    
+    O conteúdo, materiais ou orientações recebidas são destinados apenas para uso próprio do aprendiz.
+    
+    O aprendiz concorda em seguir as instruções dadas e respeitar o processo de aprendizagem.
+    
+    A ajuda poderá ser interrompida caso haja descumprimento das orientações, desrespeito ou falta de compromisso.
+    
+    Estes termos podem ser atualizados a qualquer momento, mediante aviso.
+  </div>
+
+  <div class="caixa" onclick="mudarTexto()" id="botao">ACEITAR</div>
+
+  <script>
+    let estado = 0;
+    function mudarTexto() {
+      const botao = document.getElementById("botao");
+      if (estado === 0) {
+        botao.innerText = "CONFIRMAR";
+        estado = 1;
+      } else if (estado === 1) {
+        window.location.href = "Aprovado.html";  // Redireciona para a página de confirmação
+      }
+    }
+  </script>
+</body>
+</html>
